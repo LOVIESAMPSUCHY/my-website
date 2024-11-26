@@ -1,76 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updated Responsive Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Usługi Ogrodnicze</title>
+    <style>
+        /* Style ogólne */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .offer-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            background: #f9f9f9;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #45a049;
+        }
+    </style>
 </head>
 <body>
+    <!-- Nagłówek -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Welcome to My Website</h1>
-        <button id="theme-toggle">Toggle Theme</button>
+        <h1>Usługi Ogrodnicze</h1>
+        <p>Profesjonalna pielęgnacja ogrodów</p>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>This is a simple website built with HTML, CSS, and JavaScript.</p>
-        </section>
-        
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <img src="https://via.placeholder.com/150" alt="Placeholder 1" class="gallery-item">
-                <img src="https://via.placeholder.com/150" alt="Placeholder 2" class="gallery-item">
-                <img src="https://via.placeholder.com/150" alt="Placeholder 3" class="gallery-item">
-            </div>
-        </section>
+    <!-- Nawigacja -->
+    <nav>
+        <a href="#about">O nas</a>
+        <a href="#offer">Oferta</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
 
-        <div id="modal" class="hidden">
-            <span id="close-modal">&times;</span>
-            <img id="modal-img" src="" alt="Modal Image">
+    <!-- Sekcja O nas -->
+    <section id="about" class="section">
+        <h2>O nas</h2>
+        <p>Nasza firma oferuje kompleksowe usługi ogrodnicze od ponad 10 lat. Tworzymy i pielęgnujemy ogrody, które zachwycają.</p>
+    </section>
+
+    <!-- Sekcja Oferta -->
+    <section id="offer" class="section">
+        <h2>Nasza Oferta</h2>
+        <div class="offer-card">
+            <h3>Zakładanie trawników</h3>
+            <p>Profesjonalne zakładanie trawników z rolki i siewu.</p>
         </div>
+        <div class="offer-card">
+            <h3>Pielęgnacja roślin</h3>
+            <p>Przycinanie, nawożenie i ochrona roślin.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Projektowanie ogrodów</h3>
+            <p>Indywidualne projekty dopasowane do Twoich potrzeb.</p>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <form action="https://formspree.io/f/mwpknzwv" method="POST">
-              <label for="name">Imię:</label>
-              <input type="text" id="name" name="name" required>
-          
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-          
-              <label for="message">Wiadomość:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-          
-              <button type="submit">Wyślij</button>
-            </form>
-          </section>
+    <!-- Sekcja Galeria -->
+    <section id="gallery" class="section">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Ogród 1">
+            <img src="image2.jpg" alt="Ogród 2">
+            <img src="image3.jpg" alt="Ogród 3">
+        </div>
+    </section>
 
+    <!-- Sekcja Kontakt -->
+    <section id="contact" class="section">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami!</p>
+        <form class="contact-form" action="https://formspree.io/f/mwpknzwv" method="POST">
+            <input type="text" name="name" placeholder="Twoje imię" required>
+            <input type="email" name="email" placeholder="Twój e-mail" required>
+            <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
 
-          <section id="slider">
-            <div class="slides">
-              <img src="image1.jpg" alt="Obraz 1">
-              <img src="image2.jpg" alt="Obraz 2">
-              <img src="image3.jpg" alt="Obraz 3">
-            </div>
-          </section>
-          
-          
-    </main>
-
+    <!-- Stopka -->
     <footer>
-        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+        <p>&copy; 2024 Usługi Ogrodnicze. Wszelkie prawa zastrzeżone.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
