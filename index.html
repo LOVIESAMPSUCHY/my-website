@@ -203,6 +203,32 @@ nav a:hover {
   }
 }
 
+#slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
     </style>
@@ -228,22 +254,24 @@ nav a:hover {
         <p>Nasza firma oferuje kompleksowe usługi ogrodnicze od ponad 10 lat. Tworzymy i pielęgnujemy ogrody, które zachwycają.</p>
     </section>
 
-    <!-- Sekcja Oferta -->
-    <section id="offer" class="section">
-        <h2>Nasza Oferta</h2>
-        <div class="offer-card">
-            <h3>Zakładanie trawników</h3>
-            <p>Profesjonalne zakładanie trawników z rolki i siewu.</p>
+    <section id="slider">
+        <h2>Nasze Usługi</h2>
+        <div class="slider">
+          <div class="slide">
+            <h3>Projektowanie Ogrodów</h3>
+            <p>Tworzymy unikalne projekty ogrodowe.</p>
+          </div>
+          <div class="slide">
+            <h3>Koszenie Trawy</h3>
+            <p>Profesjonalne koszenie i pielęgnacja trawników.</p>
+          </div>
+          <div class="slide">
+            <h3>Systemy Nawadniania</h3>
+            <p>Instalujemy nowoczesne systemy nawadniające.</p>
+          </div>
         </div>
-        <div class="offer-card">
-            <h3>Pielęgnacja roślin</h3>
-            <p>Przycinanie, nawożenie i ochrona roślin.</p>
-        </div>
-        <div class="offer-card">
-            <h3>Projektowanie ogrodów</h3>
-            <p>Indywidualne projekty dopasowane do Twoich potrzeb.</p>
-        </div>
-    </section>
+      </section>
+      
 
     <!-- Sekcja Galeria -->
     <section id="gallery" class="section">
